@@ -2005,7 +2005,7 @@ public final class Engine implements AutoCloseable {
                 URLClassLoader urlClassLoader = (URLClassLoader) cl;
                 for (URL url : urlClassLoader.getURLs()) {
                     try {
-                        paths.add(Path.of(url.toURI().getPath()));
+                        paths.add(Path.of(url.toURI()));
                     } catch (URISyntaxException e) {
                         // ignore invalid syntax
                     }
